@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define init_size 10
+#define init_size 1
 
 
 void push(int, int*, int*);
@@ -53,7 +53,7 @@ void push(int data, int* a, int* top){
 
 void pop(int* top) {
     if (*top == -1) {
-        printf("Stack is empty\n");
+        printf("underflow error\n");
         exit(0);
     } else {
         *top = *top - 1;
