@@ -11,7 +11,7 @@ typedef struct {
 } student;
 
 
-void main(int* argc ,char** argv) {
+int main(int argc ,char** argv) {
     int n;
     int class_total = 0; 
     double class_average; 
@@ -33,5 +33,6 @@ void main(int* argc ,char** argv) {
     for(int i=0;i<n;i++){
         printf("id: %d\nname: %s\nmaths: %d\nscience: %d\nenglis: %d\nph_no: %ld\naddress: %s\n", s[i].id, s[i].name, s[i].marks[0], s[i].marks[1], s[i].marks[2], s[i].ph_no, s[i].address);
     }
-    printf("class_average: %d\n", class_average);
+    printf("class_average: %lf\n", class_average);
+    return 0;
 }

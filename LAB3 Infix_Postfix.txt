@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+int sprecedence( char op)
+{
+    switch(op)
+    {
+        case '^':
+        case '$':
+                    return 3;
+        case '*':
+        case '/':   return 2;
+        
+        case '+':
+        case '-':
+                    return 1;
+        default:    return -1;
+    }
+}
+int iprecedence( char op)
+{
+    switch(op)
+    {
+        case '^':
+        case '$':
+                    return  4;
+        case '*':
+        case '/':   return 2;
+        
+        case '+':
+        case '-':
+                    return 1;
+        default:    return -1;
+    }
+}
+
+
+
+void infixToPostfix(char infix[], char postfix[])
+{
+    char st[20];
+    int top=-1;
+    int k=0;
+    char symbol;
+    for(int i=0; i<strlen(infix); i++)
+    {
+        symbol=infix[i];
+        if(isalnum(symbol))
+        {
+            postfix[k++]=symbol;
+        }
+        else if(symbol=='(')
+        {
+            st[++top]=symbol;
+        }
+        else if(symbol==')')
+        {
+              while(st[top] !='(')
+              {
+                  postfix[k++]=st[top--];
+              }
+              st[top--];                    // later discard symbol='('
+        }
+        else                           //if symbol is operator
+        {
+            while(sprecedence(st[top])>=iprecedence(symbol))
+            {
+                postfix[k++]=st[top--];
+            }
+            st[++top]=symbol;
+        }
+        
+    } 
+    while(top!=-1)
+    {
+            postfix[k++]=st[top--];
+    }
+    postfix[k]='\0';
+    
+}
+
+void main()
+{
+   char infix[20];
+   char postfix[20];
+   printf("\n enter infix expression\n ");
+   scanf("%s",infix);
+   infixToPostfix(infix,postfix);
+   printf("\n postfix expression : %s",postfix);
+}
+ 
