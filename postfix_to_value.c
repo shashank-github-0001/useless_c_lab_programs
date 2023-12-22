@@ -88,3 +88,8 @@ int iprecedence( char a ) {
     }
 }
 
+/*
+ * please enter a valid postfix expression
+ * 12*3+
+ * the value of the give infix expression is 5
+ */

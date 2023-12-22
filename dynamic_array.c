@@ -28,4 +28,20 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%d\n", *(a+i));
     }
+    free(a);
 }
+
+
+/*
+ * Enter the size of the array
+ * 2
+ * Enter the 2 elements of the array
+ * 1
+ * 2
+ * display the array normally
+ * 1
+ * 2
+ * display the array pointer
+ * 1
+ * 2
+ */

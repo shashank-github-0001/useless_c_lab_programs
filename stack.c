@@ -51,41 +51,41 @@ void display(int* stack, int* top) {
 
 
 /*
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-1
-give the element that you want to push
-10
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-1
-give the element that you want to push
-20
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-3
-20
-10
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-2
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-3
-10
-Enter 1 to push
-Enter 2 to pop
-Enter 3 to display
-Enter 4 to exit
-4
-*/
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 1
+* give the element that you want to push
+* 10
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 1
+* give the element that you want to push
+* 20
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 3
+* 20
+* 10
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 2
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 3
+* 10
+* Enter 1 to push
+* Enter 2 to pop
+* Enter 3 to display
+* Enter 4 to exit
+* 4
+* */

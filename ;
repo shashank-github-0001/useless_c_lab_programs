@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#define MAX_SIZE 10
+
+typedef struct {
+  int priotity;
+  int value;
+} pq;
+
+int main() {
+  pq pq[MAX_SIZE];
+  printf("select one of these options");
+  while(1){
+    printf("1:insert\n1:delete\n3:display\n4:exit");
+    char c;
+    scanf("%c", &c);
+    switch ( c ) {
+
+    }
+  }
+}

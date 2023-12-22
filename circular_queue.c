@@ -32,10 +32,10 @@ void display() {
 }
 
 
-void main() {
+int main() {
     int ch,item;
     for(;;) {
-        printf("1: insert 2: delete  3:display 4: exit \n");
+        printf("1: insert 2: delete  3:display 4: exit\n");
         printf("Enter ur choice \n");
         scanf("%d",&ch);
         switch(ch) {
@@ -43,16 +43,56 @@ void main() {
                     scanf("%d",&item);
                     enqueue(item);
                     break;
-                    
+
             case 2: dequeue();
                     break;
-                    
+
             case 3: display();
                     break;
-                    
-            default: return;
+
+            default: return 0;
         }
     }
-    
+
 }
 
+
+/*
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 1
+ * Enter item
+ * 10
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 1
+ * Enter item
+ * 20
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 1
+ * Enter item
+ * 30
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 1
+ * Enter item
+ * 40
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 3
+ * 10 	20 	30 	40 	1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 2
+ * deleted item=10
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 2
+ * deleted item=20
+ * 1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 3
+ * 30 	40 	1: insert 2: delete  3:display 4: exit
+ * Enter ur choice
+ * 4
+ */

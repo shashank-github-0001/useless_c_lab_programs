@@ -11,7 +11,6 @@ void display(int*, int*);
 int main() {
     //initial size of the stack
     int* a = (int*)malloc(init_size * sizeof(int));
-    printf("Enter the size of the stack\n");
     int top = -1;
     int choice;
     int data;
@@ -71,3 +70,38 @@ void display(int* a, int* top) {
         }
     }
 }
+
+
+/*
+ * Enter 1 to push
+ * Enter 2 to pop
+ * Enter 3 to display
+ * Enter 0 to exit
+ * 1
+ * 10
+ * Enter 1 to push
+ * Enter 2 to pop
+ * Enter 3 to display
+ * Enter 0 to exit
+ * 1
+ * 20
+ * Enter 1 to push
+ * Enter 2 to pop
+ * Enter 3 to display
+ * Enter 0 to exit
+ * 1
+ * 30
+ * Enter 1 to push
+ * Enter 2 to pop
+ * Enter 3 to display
+ * Enter 0 to exit
+ * 3
+ * 30
+ * 20
+ * 10
+ * Enter 1 to push
+ * Enter 2 to pop
+ * Enter 3 to display
+ * Enter 0 to exit
+ * 0
+ */
