@@ -4,8 +4,8 @@
 #define MAX_SIZE 100
 
 typedef struct {
-    char infix[20];
-    char postfix[20];
+    char infix[MAX_SIZE];
+    char postfix[MAX_SIZE];
 } store_shit;
 
 void infix_to_postfix(char*, char*);
@@ -22,7 +22,7 @@ int main() {
 
 
 void infix_to_postfix(char* infix, char* postfix) {
-    char stack[20];
+    char stack[MAX_SIZE];
     int top = -1;
     int j = 0;
     for (int i = 0; *(infix+i) != '\0'; i++) {
