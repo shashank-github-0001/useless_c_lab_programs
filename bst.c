@@ -96,3 +96,61 @@ void inorder(struct node* root){
         inorder(root->right);
     }
 }
+
+/*
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 
+* 1
+* enter the data you want to insert: 10
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 1
+* enter the data you want to insert: 20
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 3
+* 10->20->
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 1
+* enter the data you want to insert: 30
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 3
+* 10->20->30->
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 2
+* enter the data you want to delete: 20
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 3
+* 10->30->
+* ==========================================
+* please select your options
+* select 1 to insert new node
+* select 2 to delete a node
+* select 3 to print the tree
+* 4
+*/
