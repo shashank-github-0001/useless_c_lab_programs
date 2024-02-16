@@ -65,29 +65,6 @@ void result_from_postfix(char* postfix, int* result) {
     *(result) = stack[top];
 }
 
-int sprecedence( char a ) {
-    switch ( a ) {
-        case '^': return 3;
-        case '*':
-        case '/': return 2;
-        case '+':
-        case '-': return 1;
-        default : return -1;
-    }
-}
-
-
-int iprecedence( char a ) {
-    switch ( a ) {
-        case '^': return 4;
-        case '*':
-        case '/': return 2;
-        case '+':
-        case '-': return 1;
-        default : return -1;
-    }
-}
-
 /*
  * please enter a valid postfix expression
  * 12*3+
