@@ -1,19 +1,10 @@
 #include <stdio.h>
-#include <wctype.h>
 
-// void toh(int n, char source, char dest, char aux) {
-//     if(n==1) printf("\n move disc no=%d from %c to %c",n,source,dest);
-//     else {
-//         toh(n-1,source,aux,dest);
-//         printf("\n move disc = %d from %c to %c",n,source,dest);
-//         toh(n-1,aux,dest,source);        
-//     }
-// }
-  
 void toh(int n, char source, char dest, char aux) {
-    if(n==1);
+    if(n==1) printf("\n move disc no=%d from %c to %c",n,source,dest);
     else {
         toh(n-1,source,aux,dest);
+        printf("\n move disc = %d from %c to %c",n,source,dest);
         toh(n-1,aux,dest,source);        
     }
 }
