@@ -61,11 +61,11 @@ void insert_front(int data){
 }
 
 void delete_front(){
-    if ( head == NULL ) {
+    if (head == NULL) {
         printf("can't delete from an empty list\n");
         return;
     }
-    if ( head->next == NULL ) {
+    if (head->next == NULL) {
         free(head);
         head = NULL;
         return;
@@ -80,7 +80,7 @@ void insert_rear(int data){
     temp->next = NULL;
     temp->prev = NULL;
     temp->data = data;
-    if ( head == NULL){
+    if (head == NULL){
         head = temp;
     }
     struct Node* cur;

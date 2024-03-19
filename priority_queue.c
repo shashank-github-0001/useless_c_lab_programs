@@ -2,20 +2,21 @@
 #include <stdlib.h>
 #define MAX_SIZE 10
 
-typedef struct {
+struct priority_queue{
     int priority;
     int value;
-} priority_queue;
+};
 
 
-void insert(int, int, priority_queue*, int*);
-void delete(priority_queue*, int*);
-void display(priority_queue*, int*);
-void sort(priority_queue*, int*);
+struct priority_queue pq[MAX_SIZE];
+int top = -1;
+
+void insert(int, int);
+void delete();
+void display();
+void sort();
 
 int main() {
-    priority_queue pq[MAX_SIZE];
-    int top = -1;
     printf("select one of these options\n");
     while(1){
         printf("1:insert\n2:delete\n3:display\n4:exit\n");
@@ -27,15 +28,15 @@ int main() {
                         int priority;
                         printf("enter value and priority\n");
                         scanf("%d %d", &value, &priority);
-                        insert(value, priority, pq, &top);
+                        insert(value, priority);
                         break;
                     }
             case 2: {
-                        delete(pq, &top);
+                        delete();
                         break;
                     }
             case 3: {
-                        display(pq, &top);
+                        display();
                         break;
                     }
             case 4: exit(0);
@@ -44,33 +45,33 @@ int main() {
 }
 
 
-void delete(priority_queue* pq, int* top) {
-    printf("the deleted element is %d and the priority was %d\n", pq->value, pq->priority);
-    for(int i = 0; i<=*top; i++) {
+void delete() {
+    printf("the deleted element is %d and the priority was %d\n", pq[0].value, pq[0].priority);
+    for(int i = 0; i<=top; i++) {
         pq[i] = pq[i+1];
     }
-    *top = *top - 1;
+    top = top - 1;
 }
 
-void display(priority_queue* pq, int* top) {
-    for(int i = 0; i<=*top; i++) {
-        printf("the value is %d\nand the priority is %d\n", (pq+i)->value, (pq+i)->priority);
+void display() {
+    for(int i = 0; i<=top; i++) {
+        printf("the value is %d\nand the priority is %d\n", pq[i].value, pq[i].priority);
     }
 }
 
-void insert(int value, int priority, priority_queue* pq, int* top) {
-    *top = *top + 1;
-    (pq+*top)->value = value;
-    (pq+*top)->priority = priority;
-    printf("the inserted element is %d and the priority is %d\n", pq->value, pq->priority);
-    sort(pq, top);
+void insert(int value, int priority) {
+    top = top + 1;
+    pq[top].value = value;
+    pq[top].priority = priority;
+    printf("the inserted element is %d and the priority is %d\n", pq[top].value, pq[top].priority);
+    sort();
 }
 
-void sort(priority_queue* pq, int* top) {
-    for(int i = 0; i<=*top; i++) {
-        for(int j = i+1; j<=*top; j++) {
+void sort() {
+    for(int i = 0; i<=top; i++) {
+        for(int j = i+1; j<=top; j++) {
             if(pq[i].priority < pq[j].priority) {
-                priority_queue temp = pq[i];
+                struct priority_queue temp = pq[i];
                 pq[i] = pq[j];
                 pq[j] = temp;
             }

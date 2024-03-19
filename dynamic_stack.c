@@ -38,7 +38,7 @@ void push(int data, int* a, int* top){
         *top = *top + 1;
         a[*top] = data;
     } else {
-        a = realloc(a, (*top + 2) * sizeof(int)); //increasing the size 
+        a = realloc(a, (init_size + 1) * sizeof(int)); //increasing the size 
         if ( a == NULL ) {
             printf("Memory not allocated there was an error\n");
             exit(0);

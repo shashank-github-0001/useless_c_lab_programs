@@ -32,9 +32,10 @@ void display() {
 }
 
 
-int main() {
+
+int main(){
     int ch,item;
-    for(;;) {
+    while(1) {
         printf("1: insert 2: delete  3:display 4: exit\n");
         printf("Enter ur choice \n");
         scanf("%d",&ch);

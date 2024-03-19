@@ -3,27 +3,22 @@
 
 
 int main() {
-    printf("Enter the size of the array\n");
-    //takes the size
     int n;
+    printf("Enter the size of the array: ");
     scanf("%d", &n);
-    int* a = (int*)malloc(n * sizeof(int));
-    //checks if its refrencing to null or not
-    if ( a == NULL) {
+    int* a = malloc(n * sizeof(int));
+    if (a == NULL) {
         printf("insufficient memory");
         exit(0);
     }
-    //takes the input from the array
-    printf("Enter the %d elements of the array\n", n);
+    printf("Enter %d elements for the array: ", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &a[i]);
     }
-    //prints it in the normal format
-    printf("display the array normally\n");
+    printf("display the array normally");
     for (int i = 0; i < n; i++) {
         printf("%d\n", a[i]);
     }
-    //prints it with the help of pointer method 
     printf("display the array pointer\n");
     for (int i = 0; i < n; i++) {
         printf("%d\n", *(a+i));
