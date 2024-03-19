@@ -130,7 +130,7 @@ void delete_by_data(int data) {
     struct node* cur = HEAD;
     struct node* temp;
     while( cur->link!= NULL ) {
-        if ( cur->link->data == data ) {
+        if (cur->link->data == data) {
             temp = cur->link;
             cur->link = cur->link->link;
             free(temp);

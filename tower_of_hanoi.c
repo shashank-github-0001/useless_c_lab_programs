@@ -10,7 +10,7 @@ void toh(int n, char source, char dest, char aux) {
 }
 
 int main() {
-    toh(20, 'a', 'c', 'b');
+    toh(3, 'a', 'c', 'b');
     return 0;
 }
 
